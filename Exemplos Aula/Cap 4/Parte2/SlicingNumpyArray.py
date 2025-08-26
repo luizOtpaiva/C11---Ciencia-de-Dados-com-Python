@@ -21,7 +21,7 @@ def main():
 
     # exatrindo da primeira coluna para frente 
     primeira_coluna_para_frente = mtz[:, 1:]  # Extrai a primeira coluna para frente
-    print("Primeira coluna:", primeira_coluna_para_frente)  # Imprime a primeira coluna 
+    print("Primeira coluna para frente :", primeira_coluna_para_frente)  # Imprime a primeira coluna 
 
     # exatraindo a segunda linha e terceira coluna
     segunda_linha_terceira_coluna = mtz[1, 2]  # Extrai o elemento da segunda linha e terceira coluna

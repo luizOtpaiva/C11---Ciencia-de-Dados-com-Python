@@ -31,6 +31,5 @@ def main():
     print(arr[np.char.find(arr, "GO") >= 0])  # Exibe os nomes que contêm "GO" no novo array em maiúsculas
 
 
-
 if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
     main()
