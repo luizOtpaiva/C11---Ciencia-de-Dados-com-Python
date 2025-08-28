@@ -8,11 +8,11 @@ def main():
         delimiter=';', dtype=str, encoding='utf-8'
     )
 
-    # pegando todas as missoes realizadas no eua
+    # pegando todas as missoes realizadas
     arr_missoes_realizadas_no_eua = ds[1:, 2]  # do índice 1 até o fim , só a coluna 2
-    print("Coluna de missoes realizadas no EUA:\n", arr_missoes_realizadas_no_eua)  # Exibe a coluna de missoes realizadas no EUA
+    print("Coluna de missoes realizadas no EUA:\n", arr_missoes_realizadas_no_eua)  # Exibe a coluna de missoes realizadas
 
-
+    # missoes realizadas apenas nos EUA
     count_missoes_realizadas = np.sum(np.char.find(arr_missoes_realizadas_no_eua, 'USA'))
     print("Número de missões realizadas nos EUA:", count_missoes_realizadas)
 
