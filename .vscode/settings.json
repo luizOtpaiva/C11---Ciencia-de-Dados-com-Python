@@ -1,0 +1,9 @@
+{
+    "python.analysis.addHoverSummaries": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": true
+    }
+}

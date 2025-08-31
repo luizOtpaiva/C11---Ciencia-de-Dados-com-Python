@@ -8,7 +8,6 @@ def main():
         delimiter=';', dtype=str, encoding='utf-8'
     )
 
-
     # contandp e mostrando quantas regiões tem
 
     # pega somente as regiões

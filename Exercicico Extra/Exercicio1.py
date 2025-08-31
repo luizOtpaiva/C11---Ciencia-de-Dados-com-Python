@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def main():
 
     ds = np.loadtxt(
@@ -8,8 +7,6 @@ def main():
         delimiter=';', dtype=str, encoding='utf-8'
     )
      
-    
-    
     # mostrar apenas o País (Country), Região (Region), População (Population) e Area (Area (sq. mi.)) dos países
 
     todos_pedidos = ds[:, :4]  # do índice 1 até o fim , só a coluna 1 para pegar a empresa
