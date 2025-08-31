@@ -16,8 +16,8 @@ def main():
     print(regiao)
 
     quantidade = np.unique(regiao) # unique conta a quantidade
-    print("Quantidade de regioes: ", len(quantidade))
-
-
+    print("Quantidade de regioes: ", len(quantidade)) # len conta o tamnho do array
+    
 if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
     main() 
+    

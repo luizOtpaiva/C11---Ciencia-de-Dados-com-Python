@@ -12,17 +12,9 @@ def main():
     
     # mostrar apenas o País (Country), Região (Region), População (Population) e Area (Area (sq. mi.)) dos países
 
-    todos_pedidos = ds[:1, :4]  # do índice 1 até o fim , só a coluna 1 para pegar a empresa
+    todos_pedidos = ds[:, :4]  # do índice 1 até o fim , só a coluna 1 para pegar a empresa
 
     print(todos_pedidos)
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
     main() 

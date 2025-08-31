@@ -11,9 +11,9 @@ def main():
     # Extrair coluna de status (sem cabeçalho)
     arr_status = ds[1:, 7]
 
-    # Limpar espaços e vírgulas extras
-    arr_status = np.char.strip(arr_status)           # tira espaços
-    arr_status = np.char.replace(arr_status, ",", "") # tira vírgulas
+    # Limpar espaços e vírgulas extras, pois meu arquivo esta com isso
+    arr_status = np.char.strip(arr_status)           
+    arr_status = np.char.replace(arr_status, ",", "") 
 
     # Contar sucessos
     count_success = np.sum(arr_status == 'Success')

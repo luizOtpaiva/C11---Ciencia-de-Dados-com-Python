@@ -12,7 +12,7 @@ def main():
 
     paises =  ds[1:,1] # pega apenas as linhas da regiao, 
 
-    count_missoes_realizadas = np.sum(np.char.find(paises, 'NORTHERN AMERICA') >= 0)
+    count_missoes_realizadas = np.sum(np.char.find(paises, 'NORTHERN AMERICA') >= 0) # lembrar do >= 0 na prova
     print(count_missoes_realizadas)
 
 

@@ -15,7 +15,7 @@ colunas = ds[:, 0]  # Extrai todas as colunas do dataset
 # calculando a media de uma missao espacial 
 #slicing para extrair a coluna custo(cost)
 
-arr_cost = ds[1, 6]  # Extrai a coluna de custo (cost) do dataset
+arr_cost = ds[1, 6]  # Extrai a coluna de custo (cost) do dataset apenas da 1 linha
 print("Coluna de custo (cost):\n", arr_cost)  # Exibe a coluna de custo
 
 # convertendo a coluna de custo para float

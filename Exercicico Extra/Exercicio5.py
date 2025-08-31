@@ -18,7 +18,7 @@ def main ():
     paises = paises[paises[:,1] == "LATIN AMER. & CARIB    "]
     custos = np.max(paises[:, 2].astype(float))
 
-  # converter GDP para float
+  # converter para float
     custos = paises[:,2].astype(float)
 
     # encontrar índice do maior custo

@@ -14,21 +14,8 @@ def main():
     print(mtz[mtz > 5])  # Exibe os elementos da matriz que são maiores que 5
 
     # extraindo os elemntos pares da matriz
-    print("Elementos pares da matriz:", mtz[mtz % 2 == 0])  # Exibe os elementos pares da matriz  
-
-
-
-
-
-
+    print("Elementos pares da matriz:", mtz[mtz % 2 == 0])  # Exibe os elementos pares da matriz 
     
-
-
-
-
-
-
-
 
 if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
     main()  

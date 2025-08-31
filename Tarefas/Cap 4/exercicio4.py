@@ -18,7 +18,5 @@ def main():
     else:
         print("A matriz não pode ser transformada em uma matriz quadrada.")
 
-
-
 if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
     main()

@@ -21,6 +21,5 @@ def main():
     media_cost = np.mean(arr_cost_float_maior) 
     print("Média dos custos (cost) maiores que 0:", media_cost)  
 
-
 if main() == '__main__':  
     main()

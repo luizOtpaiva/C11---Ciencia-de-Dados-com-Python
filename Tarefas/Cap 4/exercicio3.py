@@ -1,48 +1,48 @@
-import numpy as np # Importando a biblioteca NumPy
-
-# fazendo um mini campo minado com a biblioteca NumPy
+import numpy as np
 
 def main():
-    # criaando uma matriz 2x2 formado apenas por 0's
-    campo_minado = np.zeros((2, 2))
-    print("Campo minado inicial:", campo_minado)
+    # cria uma matriz 2x2 só com zeros
+    campo_minado = np.zeros((2, 2), dtype=int)
 
-    # adicionado um numero aleatorio em uma das posiçoes da matriz
-    posicao_aleatoria = np.random.randint(0, 2, size=2)  # Gera uma posição aleatória (linha, coluna)
-    campo_minado[tuple(posicao_aleatoria)] = np.random.randint(1, 2)  # Atribui um número aleatório entre 1 e 9
-    print("Posição aleatória escolhida:", posicao_aleatoria) # mostra a posiçao aleatoria escolhida
-    print("Campo minado após adição de número aleatório:", campo_minado) # mostra o campo minado após a adição do número aleatório
+    # sorteia uma posição aleatória para a bomba
+    posicao_bomba = tuple(np.random.randint(0, 2, size=2))
+    campo_minado[posicao_bomba] = 1  # coloca a bomba
 
-    # usuario faz uma entrada de dados para solicitar o usuário que faça uma jogada (selecione uma posição da matriz)
-    jogada = input("Escolha uma posição no campo minado (ex: 0,0 para linha 0 e coluna 0): ")
-    linha, coluna = map(int, jogada.split(','))  # Divide a entrada e converte para inteiros
-    print("Jogada escolhida:", (linha, coluna))  # mostra a jogada escolhida
-    # mostra o campo minado após a jogada do usuário
-    print("Campo minado após a jogada do usuário:", campo_minado)
-
-
-    if campo_minado[linha, coluna] == 0:
-        print("Parabéns! Você acertou uma posição sem bomba!")
-    else:
-        print("Você perdeu! A posição escolhida tinha uma bomba!")
-
-   # caso contrario dentro das 3 primeiras jogadas o usuário não tenha acertado, ele perde o jogo
+    # variáveis de controle
     tentativas = 3
+    jogadas_certas = 0
+    total_seguras = 3  # já que é 2x2 com 1 bomba → 3 posições seguras
+
+    print("Bem-vindo ao Mini Campo Minado 2x2!")
+    print("Escolha posições no formato: linha,coluna (exemplo: 0,1)\n")
+
     while tentativas > 0:
-        jogada = input(f"Você ainda tem {tentativas} tentativas. Escolha uma posição (ex: 0,1): ")
-        linha, coluna = map(int, jogada.split(','))
-        
-        if campo_minado[linha, coluna] == 0:
-            print("Parabéns! Você acertou uma posição sem bomba!")
-            break
+        jogada = input(f"Tentativa {4 - tentativas}/3 - Escolha posição: ")
+        try:
+            linha, coluna = map(int, jogada.split(','))
+        except:
+            print("Entrada inválida! Use o formato linha,coluna (exemplo: 0,1).")
+            continue
+
+        # verifica se dentro da matriz
+        if linha not in [0,1] or coluna not in [0,1]:
+            print("Posição fora da matriz! Escolha entre 0 e 1.")
+            continue
+
+        if (linha, coluna) == posicao_bomba:
+            print("Game Over! :( Try Again!")
+            return
         else:
-            print("Você perdeu! A posição escolhida tinha uma bomba!")
-        
+            print("Boa! Posição segura.")
+            jogadas_certas += 1
+            if jogadas_certas == total_seguras:
+                print("Congratulations! You beat the game! :)")
+                return
+
         tentativas -= 1
 
-        if tentativas == 0:
-            print("Você perdeu o jogo! Não sobrou mais tentativas.")
+    # se acabarem as 3 tentativas e não venceu
+    print("Fim de jogo! Você não conseguiu encontrar todas as posições seguras.")
 
-
-if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
+if __name__ == "__main__":
     main()
