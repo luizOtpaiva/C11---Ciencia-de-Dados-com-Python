@@ -1,28 +1,23 @@
 import numpy as np 
 
 def main():
-    ds = np.loadtxt(
-        r"C:\Users\luizo\OneDrive\Área de Trabalho\Inatel Materias\6 semesntre\C11 - Python\C11 - Ciencia de Dados com Python\Exemplos Aula\space(in).csv", 
-        delimiter=';', dtype=str, encoding='utf-8'
-    )
-
-    print("Dataset carregado:\n", ds)
-
-    # Extrair coluna de status (sem cabeçalho)
-    arr_status = ds[1:, 7]
-
-    # Limpar espaços e vírgulas extras, pois meu arquivo esta com isso
-    arr_status = np.char.strip(arr_status)           
-    arr_status = np.char.replace(arr_status, ",", "") 
-
-    # Contar sucessos
-    count_success = np.sum(arr_status == 'Success')
-    print("Número de missões com status 'Success':", count_success)
-
-    # mostranddo a porcentagem de missoes bem sucedidas
-    total_missions = arr_status.shape[0]
-    success_percentage = (count_success / total_missions) * 100
-    print("Porcentagem de missões bem-sucedidas: ", success_percentage, "%")
-
+    
+    
+    ds = np.loadtxt(r"C:\Users\luizo\OneDrive\Área de Trabalho\Inatel Materias\6 semesntre\C11 - Python\C11 - Ciencia de Dados com Python\Exemplos Aula\space(in).csv", delimiter=';', dtype=str, encoding='utf-8')
+    
+    
+    print(ds) # dataset carregado
+    
+    # lendo apenas as colunas das missoes
+    
+    status_missao = ds[1:, 7] # le a partir da linha 1, a coluna 8
+    
+    # vendo a quantidade de missoes que deram certas
+    
+    missoes_corretas = np.sum(status_missao == "Success,,,,,," )
+    print(missoes_corretas)
+    
+    # vendo a porcentagem de missoes
+    
 if __name__ == '__main__':  
     main()

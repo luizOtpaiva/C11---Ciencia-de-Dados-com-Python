@@ -6,7 +6,6 @@ def main():
     mtz = np.arange(1, 10, 1).reshape(3,3) # cria uma matriz 3x3 com valores de 1 a 9
     print("Matriz 3x3:\n", mtz)  # imprimindo a matriz
 
-
     # extrair a primeira linha e coluna da matriz
     terceira_linha = mtz[2]  # Extrai a terceira linha da matriz ou pode ser mtz[2, :] para extrair a terceira linha
     print("Primeira linha:", terceira_linha)  # Imprime a primeira linha
@@ -27,14 +26,6 @@ def main():
     segunda_linha_terceira_coluna = mtz[1, 2]  # Extrai o elemento da segunda linha e terceira coluna
     print("Elemento da segunda linha e terceira coluna:", segunda_linha_terceira_coluna)  # Imprime o elemento
    
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':  # para poder mostrar que esse é o programa principal
     main()
