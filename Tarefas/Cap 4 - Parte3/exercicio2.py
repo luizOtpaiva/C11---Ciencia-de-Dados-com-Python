@@ -21,6 +21,9 @@ def main():
     
     print("Valor medio do custo eh de :", custos_medio)
     
+
+
+
     
 if __name__ == '__main__':  
     main()  

@@ -20,6 +20,7 @@ def main():
     
     custos = paises[:,2].astype(float) # converte para float 
     
+    
     # encontrar índice do maior custo
     idx_max = np.argmax(custos) # pega onde esta o indice de maior valor, se vemos no print anterios veremos que é o 10
     print("Inidice de onde esta o maior custo: " , idx_max) # printa o maior indice

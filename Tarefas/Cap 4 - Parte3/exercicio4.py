@@ -15,14 +15,11 @@ def main():
     
     pegando_SpaceX = np.char.find(nomes_empresas, "SpaceX") >= 0 # retorna um bool para onde encontra a empresa SpaceX
     
+    
     maior_custo_SpaceX = np.max(custo_float[pegando_SpaceX]) # pega o maximo valor de custo na spaceX
     print("O maior custo da empresa SoaceX eh de: " , maior_custo_SpaceX)
     
-    
-    
-    
-    
-    
-    
+
 if __name__ == '__main__':
     main()
+    

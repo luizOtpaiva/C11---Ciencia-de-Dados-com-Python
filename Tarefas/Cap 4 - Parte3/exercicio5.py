@@ -10,6 +10,12 @@ def main():
     
     empresas_missoes_espaciais = ds[1:,1] #pega as empresas
     
+    
+    ## Assim você terá dois arrays paralelos:
+    ## empresas[i] → nome da empresa
+    ## contagens[i] → quantidade de missões daquela empresa
+    #o parâmetro return_counts=True, ele também devolve quantas vezes cada valor aparece.
+    
     empresas, contagens = np.unique(empresas_missoes_espaciais, return_counts=True)
     
     # Mostra os resultados
