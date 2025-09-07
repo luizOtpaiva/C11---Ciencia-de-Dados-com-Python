@@ -25,10 +25,5 @@ def main():
     print ('Soma com valor padrao', series.add(series2, fill_value=0))
     print ('Subtração com valor padrao', series.sub(series2, fill_value=0))
     
-    
-    
-    
-
-    
 if __name__ == '__main__':
     main()

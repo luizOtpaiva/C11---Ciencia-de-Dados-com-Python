@@ -1,0 +1,23 @@
+import pandas as pd
+
+def main():
+    # criando uma series, usando duas listas de de inicio
+    
+    indices = ['a', 'b', 'c']
+    valores = [10,20,30]
+    
+    # criando um dicionario
+    
+    dic = {'a':10, 'b':20, 'c':30}
+    dic2 = {'a':10, 'b':20,'d':40}
+    
+    series = pd.Series(dic) # cria uma series a partir de um dicionario
+    series2 = pd.Series(dic2)
+    
+    # condicionais usando pandas
+    
+    print('Valores memnores que 20', series[series < 20]) # mostra os valores menores que 20, se fizer usando uma series so ele retorna true somente
+    
+ 
+if __name__ == '__main__':
+    main()
